@@ -16,6 +16,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
+        logging.info('Azure function with params fired')
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully and was previously deployed with Azure DevOps.")
     else:
         return func.HttpResponse(
