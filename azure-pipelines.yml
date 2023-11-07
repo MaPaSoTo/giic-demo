@@ -39,9 +39,10 @@ stages:
       displayName: 'Build extensions'
 
     - task: UsePythonVersion@0
-      displayName: 'Use Python 3.6'
+      displayName: 'Use Python 3.11.6 (x64)' #3.11.6 (x64)
       inputs:
-        versionSpec: 3.6 # Functions V2 supports Python 3.6 as of today
+        #versionSpec: 3.6 # Functions V2 supports Python 3.6 as of today
+        versionSpec: 3.11.6 # Functions V2 supports Python 3.6 as of today
 
     - bash: |
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
